@@ -1,39 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react'
 
-import './App.css';
+import './App.css'
+import Game from './components/Game'
 
-const Square = props => {
-  const [value, setValue] = useState(null);
-
+function App () {
   return (
-    <button
-      className="square"
-      onClick={() => setValue('X')} /* updated line */
-    >
-      {value} {/* updated line */}
-    </button>
-  );
-};
-
-const Board = props => {
-  const initialSquares = Array(9).fill(null); /* added line */
-  const [squares, setSquares] = useState(initialSquares); /* added line */
- return (
-   initialSquares.map(() => {
-     <Square/
-   })
- )
-
+    <div className='App'>
+      <Game />
+    </div>
+  )
 }
 
-
-
-
-function App() {
-  return (
-    <div className="App">
-      <Board/>
-    </div>
-  )}
-
-  export default App
+export default App
